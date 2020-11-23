@@ -1,7 +1,20 @@
 static def call () {
 
-    script {
-        echo "Function test"
+    pipeline {
+        agent {
+	    label 'master'
+	    docker {
+                image 'alpine:3.12'
+            }
+    }
+    stages {
+        stage("Test") {
+            steps {
+                script {
+                    echo "Function test"
+                }
+            }
+        }
     }
 
 }
