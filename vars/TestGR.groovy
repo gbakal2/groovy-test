@@ -6,6 +6,7 @@ static def call () {
 	    docker {
                 image 'alpine:3.12'
             }
+        }
     }
     stages {
         stage("Test") {
