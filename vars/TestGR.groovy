@@ -1,6 +1,7 @@
 def call () {
 
     pipeline {
+
         agent {
 	        docker { image 'alpine:3.12' }
         }
@@ -9,11 +10,12 @@ def call () {
             stage("Test") {
                 steps {
                     script {
-                        echo "Function tesh"
+                        echo "Functional test"
                     }
                 }
             }
         }
+
     }
 
 }
