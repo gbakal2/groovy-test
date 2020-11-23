@@ -1,4 +1,4 @@
-static def call () {
+def call () {
 
     pipeline {
         agent {
